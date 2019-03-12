@@ -1,4 +1,4 @@
-package com.joao.imagefromurl;
+package Models;
 
 public interface Webtoons {
     public void all();
