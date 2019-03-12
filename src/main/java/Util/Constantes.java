@@ -4,69 +4,55 @@ package Util;
  * Contain useful links and default paths
  */
 public class Constantes {
-    private String COMIC_NAVER = "https://comic.naver.com/webtoon/";
+    private String ComicNaver = "https://comic.naver.com/webtoon/";
 
-    private String DETAIL_TITLE_ID = "detail.nhn?titleId=";
-    private String DETAIL_CHAPTER = "&no=";
-    private String LIST_TITLE_ID = "list.nhn?titleId=";
-    private String LIST_PAGE = "&page=";
-    private Integer START_PAGE = 1;
-    private Integer END_PAGE = 1;
+    private String DetailTitleId = "detail.nhn?titleId=";
+    private String DetailChapter = "&no=";
+    private String ListTitleId = "list.nhn?titleId=";
+    private String ListPage = "&page=";
 
-    private String PATH = "/Users/joao/Documents/";
-    private String DIRECTORY = "Webtoons/";
+    private String path = "/Users/joao/Documents/";
+    private String directory = "Webtoons/";
 
-    private Integer TIMEOUT = 5;
+    private Integer timeout = 15 * 1000; // value in milis
 
     public String getComicNaver() {
-        return COMIC_NAVER;
+        return ComicNaver;
     }
 
     public String getDetailTitleId() {
-        return DETAIL_TITLE_ID;
+        return DetailTitleId;
     }
 
     public String getDetailChapter() {
-        return DETAIL_CHAPTER;
+        return DetailChapter;
     }
 
     public String getListTitleId() {
-        return LIST_TITLE_ID;
+        return ListTitleId;
     }
 
     public String getPath() {
-        return PATH;
+        return path;
     }
 
     public String getDirectory() {
-        return DIRECTORY;
-    }
-
-    public Integer getStartPage() {
-        return START_PAGE;
-    }
-
-    public void setStartPage(Integer startPage) {
-        this.START_PAGE = START_PAGE;
-    }
-
-    public Integer getEndPage() {
-        return END_PAGE;
-    }
-
-    public void setEndPAge(Integer endPage) {
-        this.END_PAGE = END_PAGE;
+        return directory;
     }
 
     public Integer getTimeOut() {
-        return TIMEOUT;
+        return timeout;
     }
 
     public void setTimeOut(Integer timeOut) {
-        this.TIMEOUT = TIMEOUT;
+        this.timeout = timeout;
     }
 
     public String getLinkUrl(Integer titleId, Integer chapter){
-        return COMIC_NAVER + DETAIL_TITLE_ID + titleId + DETAIL_CHAPTER + chapter;
+        return ComicNaver + DetailTitleId + titleId + DetailChapter + chapter;
+    }
+
+    public String getLinksFromPage(Integer titleId, Integer page){
+        return ComicNaver + ListTitleId + titleId + ListPage + page;
     }
 }

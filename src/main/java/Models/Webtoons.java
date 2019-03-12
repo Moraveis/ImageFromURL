@@ -1,11 +1,12 @@
 package Models;
 
+import Util.Titles;
+
 public interface Webtoons {
-    public void all();
+
+    public void all(Titles t, Integer startPage, Integer endPage);
 
     public void byChapter();
-
-    public void downloadChapter(String name, String folder);
 
     public void downloadChapter(String name, String folder, Integer titleId);
 
