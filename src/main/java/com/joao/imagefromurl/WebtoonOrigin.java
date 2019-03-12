@@ -29,7 +29,7 @@ import org.jsoup.select.Elements;
  *
  * @author joao
  */
-public class Webtoon {
+public class WebtoonOrigin {
 
     private static Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     private static String urlBase = "https://comic.naver.com";
@@ -176,7 +176,7 @@ public class Webtoon {
     }
 
     private static void downloadChapter(String name, String link, String folder) {
-        Webtoon.folder = folder;
+        WebtoonOrigin.folder = folder;
         downloadChapter(name, link);
     }
 
@@ -221,7 +221,7 @@ public class Webtoon {
                 in.close();
                 byte[] response = out.toByteArray();
 
-                String folder = "/Users/joao/Documents/Webtoons/" + Webtoon.folder + "/";
+                String folder = "/Users/joao/Documents/Webtoons/" + WebtoonOrigin.folder + "/";
 
                 folder = folder + name + "/";
                 File chapterFolder = new File(folder);
@@ -234,7 +234,7 @@ public class Webtoon {
                             System.out.println("DIR created");
                         }
                     } catch (SecurityException se) {
-                        folder = "/Users/joao/Documents/Webtoons/" + Webtoon.folder + "/";
+                        folder = "/Users/joao/Documents/Webtoons/" + WebtoonOrigin.folder + "/";
                         logger.log(Level.SEVERE, se.getMessage());
                     }
                 }
