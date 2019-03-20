@@ -19,6 +19,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import Util.Titles;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -36,8 +38,10 @@ public class WebtoonOrigin {
     private static String folder = "general";
 
     public static void main(String[] args) {
-        //all();
-        one();
+        ComicNaver cn = new ComicNaver();
+
+
+        cn.all(Titles.뷰티풀_군바리, 1, 2);
     }
 
     private static void all() {

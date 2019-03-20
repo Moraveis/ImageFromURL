@@ -4,17 +4,16 @@ package Util;
  * Contain useful links and default paths
  */
 public class Constantes {
-    private String ComicNaver = "https://comic.naver.com/webtoon/";
+    private String ComicNaver = "https://comic.naver.com";
 
-    private String DetailTitleId = "detail.nhn?titleId=";
+    private String DetailTitleId = "/webtoon/detail.nhn?titleId=";
     private String DetailChapter = "&no=";
-    private String ListTitleId = "list.nhn?titleId=";
+    private String ListTitleId = "/webtoon/list.nhn?titleId=";
     private String ListPage = "&page=";
 
-    private String path = "/Users/joao/Documents/";
-    private String directory = "Webtoons/";
+    private String directory = "/Users/joao/Documents/Webtoons/";
 
-    private Integer timeout = 15 * 1000; // value in milis
+    private Integer timeout = 5 * 1000; // value in milis
 
     public String getComicNaver() {
         return ComicNaver;
@@ -30,10 +29,6 @@ public class Constantes {
 
     public String getListTitleId() {
         return ListTitleId;
-    }
-
-    public String getPath() {
-        return path;
     }
 
     public String getDirectory() {

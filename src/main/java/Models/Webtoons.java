@@ -8,7 +8,7 @@ public interface Webtoons {
 
     public void byChapter();
 
-    public void downloadChapter(String name, String folder, Integer titleId);
+    public void downloadChapter(String name, String folder, Titles title);
 
     public boolean isDownloaded(String search);
 
