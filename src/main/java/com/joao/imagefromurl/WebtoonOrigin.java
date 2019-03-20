@@ -39,10 +39,9 @@ public class WebtoonOrigin {
 
     public static void main(String[] args) {
         ComicNaver cn = new ComicNaver();
-        cn.all(Titles.캉타우, 1, 4);
 
-//        all();
-//        one();
+
+        cn.all(Titles.뷰티풀_군바리, 1, 2);
     }
 
     private static void all() {

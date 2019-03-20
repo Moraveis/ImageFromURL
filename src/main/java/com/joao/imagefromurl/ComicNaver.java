@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -89,9 +90,9 @@ public class ComicNaver implements Webtoons {
         Elements lstImg = doc.getElementsByClass("wt_viewer");
         Elements imgs = lstImg.get(0).getElementsByTag("img");
 
+        AtomicInteger ordinal = new AtomicInteger(0);
         imgs.stream().forEach(img -> {
             String urlImg = img.attr("src");
-            int i = 0;
 
             try {
                 URL url = new URL(urlImg);
@@ -128,8 +129,9 @@ public class ComicNaver implements Webtoons {
                     }
                 }
 
-                FileOutputStream fos = new FileOutputStream(folder + (++i) + ".jpg");
-                System.out.println("Image: " + folder + i + ".jpg");
+                ordinal.getAndIncrement();
+                FileOutputStream fos = new FileOutputStream(folder + ordinal + ".jpg");
+                System.out.println("Image: " + folder + ordinal + ".jpg");
                 fos.write(response);
                 fos.close();
 

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0573eb6-ca5f-4cba-89a0-ec49ecb1afa5" name="Default Changelist" comment="">
+    <list default="true" id="f0573eb6-ca5f-4cba-89a0-ec49ecb1afa5" name="Default Changelist" comment="Titles ids added; implemented downloadChapter method for comicnaver; joined path and directory attributes in constantes.class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Webtoons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Webtoons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Util/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/Constantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Util/Titles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/Titles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/ComicNaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/ComicNaver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/WebtoonOrigin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/WebtoonOrigin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/joao/imagefromurl/ImageFromURL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/joao/imagefromurl/MangaGo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/joao/imagefromurl/MangaLHScan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/joao/imagefromurl/ReadMoreContent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/joao/imagefromurl/Webtoon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/joao/imagefromurl/teste.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,10 +27,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/ComicNaver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+            <state relative-caret-position="192">
+              <caret line="103" column="72" lean-forward="true" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5005#5006#0" expanded="true" />
                 <element signature="e#5033#5034#0" expanded="true" />
               </folding>
             </state>
@@ -34,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Util/Constantes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="4">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -43,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Util/Titles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-28">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="135">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -52,8 +59,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/WebtoonOrigin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="260" column="9" lean-forward="true" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
+            <state relative-caret-position="162">
+              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#WebtoonOrigin#0" />
+                <element signature="method#all#0;class#WebtoonOrigin#0" />
+                <element signature="e#1612#2608#0" />
+                <element signature="e#1672#2370#1" />
+                <element signature="e#1986#2314#1" />
+                <element signature="e#2412#2597#1" />
+                <element signature="e#2493#2583#1" />
+                <element signature="e#2629#2673#0" />
+                <element signature="method#one#0;class#WebtoonOrigin#0" />
+                <element signature="e#2713#2731#0" />
+                <element signature="method#downloadChapter#0;class#WebtoonOrigin#0" />
+                <element signature="method#downloadChapter#1;class#WebtoonOrigin#0" />
+                <element signature="e#10276#10326#0" />
+                <element signature="e#10347#10448#0" />
+                <element signature="e#10462#10502#0" />
+                <element signature="e#10523#10623#0" />
+                <element signature="e#10802#12928#1" />
+                <element signature="e#10865#12600#0" />
+                <element signature="e#11349#11410#1" />
+                <element signature="e#11766#12364#1" />
+                <element signature="e#11882#12129#0" />
+                <element signature="e#11935#12107#1" />
+                <element signature="e#12159#12346#0" />
+                <element signature="e#12621#12754#0" />
+                <element signature="e#12772#12823#0" />
+                <element signature="e#12844#12917#0" />
+                <element signature="e#12941#12995#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,8 +138,8 @@
         <option value="$PROJECT_DIR$/src/main/java/enums/Constantes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/Webtoons.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Webtoons.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/WebtoonOrigin.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Titles.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/WebtoonOrigin.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Constantes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/ComicNaver.java" />
       </list>
@@ -127,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,11 +216,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552832033822" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553043573242" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -240,31 +276,38 @@
       <option name="presentableId" value="Default" />
       <updated>1541413900369</updated>
     </task>
+    <task id="LOCAL-00001" summary="Titles ids added; implemented downloadChapter method for comicnaver; joined path and directory attributes in constantes.class">
+      <created>1552832144357</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552832144357</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="719" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16962843" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1736672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="UI Designer" order="6" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32854864" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32854864" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39872408" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39872408" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32854864" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32854864" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -280,13 +323,15 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="Titles ids added; implemented downloadChapter method for comicnaver; joined path and directory attributes in constantes.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Titles ids added; implemented downloadChapter method for comicnaver; joined path and directory attributes in constantes.class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/ComicNaver.java</url>
-          <line>26</line>
+          <line>28</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -309,13 +354,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/MangaGo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/ImageFromURL.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/MangaLHScan.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Titles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Models/Webtoons.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -323,26 +361,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Constantes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Titles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="135">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/WebtoonOrigin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="260" column="9" lean-forward="true" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
+        <state relative-caret-position="162">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#WebtoonOrigin#0" />
+            <element signature="method#all#0;class#WebtoonOrigin#0" />
+            <element signature="e#1612#2608#0" />
+            <element signature="e#1672#2370#1" />
+            <element signature="e#1986#2314#1" />
+            <element signature="e#2412#2597#1" />
+            <element signature="e#2493#2583#1" />
+            <element signature="e#2629#2673#0" />
+            <element signature="method#one#0;class#WebtoonOrigin#0" />
+            <element signature="e#2713#2731#0" />
+            <element signature="method#downloadChapter#0;class#WebtoonOrigin#0" />
+            <element signature="method#downloadChapter#1;class#WebtoonOrigin#0" />
+            <element signature="e#10276#10326#0" />
+            <element signature="e#10347#10448#0" />
+            <element signature="e#10462#10502#0" />
+            <element signature="e#10523#10623#0" />
+            <element signature="e#10802#12928#1" />
+            <element signature="e#10865#12600#0" />
+            <element signature="e#11349#11410#1" />
+            <element signature="e#11766#12364#1" />
+            <element signature="e#11882#12129#0" />
+            <element signature="e#11935#12107#1" />
+            <element signature="e#12159#12346#0" />
+            <element signature="e#12621#12754#0" />
+            <element signature="e#12772#12823#0" />
+            <element signature="e#12844#12917#0" />
+            <element signature="e#12941#12995#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Constantes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/joao/imagefromurl/ComicNaver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="192">
+          <caret line="103" column="72" lean-forward="true" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5005#5006#0" expanded="true" />
             <element signature="e#5033#5034#0" expanded="true" />
           </folding>
         </state>

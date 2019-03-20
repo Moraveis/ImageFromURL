@@ -13,7 +13,7 @@ public class Constantes {
 
     private String directory = "/Users/joao/Documents/Webtoons/";
 
-    private Integer timeout = 15 * 1000; // value in milis
+    private Integer timeout = 5 * 1000; // value in milis
 
     public String getComicNaver() {
         return ComicNaver;
