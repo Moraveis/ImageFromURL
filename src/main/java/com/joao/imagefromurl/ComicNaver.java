@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 public class ComicNaver implements Webtoons {
 
     private static Logger logger = Logger.getLogger(ComicNaver.class.getName());
-    private Constantes constantes = new Constantes();
+//    private Constantes constantes = new Constantes();
 
     @Override
     public void all(Titles t, Integer startPage, Integer endPage) {
@@ -33,7 +33,7 @@ public class ComicNaver implements Webtoons {
 
         try {
             for (int p = startPage; p <= endPage; p++) {
-                String url = constantes.getLinksFromPage(t.getTitleId(), p);
+                String url = Constantes.getLinksFromPage(t.getTitleId(), p);
 
                 con = Jsoup.connect(url);
                 doc = con.get();
@@ -49,7 +49,7 @@ public class ComicNaver implements Webtoons {
                     logger.log(Level.INFO, "{\"title\": \"{"+t.getName()+"}\", \"link\": \"{"+link+"}\"}");
                 }
 
-                Thread.sleep(constantes.getTimeOut());
+                Thread.sleep(Constantes.getTimeOut());
             }
 
             if (map.size() > 0) {
@@ -73,7 +73,7 @@ public class ComicNaver implements Webtoons {
         Document doc = null;
         Connection con = null;
 
-        link = constantes.getComicNaver() + link;
+        link = Constantes.getComicNaver() + link;
 
         try {
             con = Jsoup.connect(link);
@@ -111,7 +111,7 @@ public class ComicNaver implements Webtoons {
                 in.close();
                 byte[] response = out.toByteArray();
 
-                String folder = constantes.getDirectory() + title.getFolder() + "/";
+                String folder = Constantes.getDirectory() + title.getFolder() + "/";
 
                 folder = folder + name + "/";
                 File chapterFolder = new File(folder);
@@ -124,7 +124,7 @@ public class ComicNaver implements Webtoons {
                             System.out.println("DIR created");
                         }
                     } catch (SecurityException se) {
-                        folder = constantes.getDirectory() + title.getFolder() + "/";
+                        folder = Constantes.getDirectory() + title.getFolder() + "/";
                         logger.log(Level.SEVERE, se.getMessage());
                     }
                 }
@@ -140,7 +140,7 @@ public class ComicNaver implements Webtoons {
             }
 
             try {
-                Thread.sleep(constantes.getTimeOut());
+                Thread.sleep(Constantes.getTimeOut());
             } catch (Exception e) {
                 logger.log(Level.SEVERE, e.getMessage());
             }
