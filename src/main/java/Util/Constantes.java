@@ -4,18 +4,18 @@ package Util;
  * Contain useful links and default paths
  */
 public class Constantes {
-    private String ComicNaver = "https://comic.naver.com";
+    private static String ComicNaver = "https://comic.naver.com";
 
-    private String DetailTitleId = "/webtoon/detail.nhn?titleId=";
-    private String DetailChapter = "&no=";
-    private String ListTitleId = "/webtoon/list.nhn?titleId=";
-    private String ListPage = "&page=";
+    private static String DetailTitleId = "/webtoon/detail.nhn?titleId=";
+    private static String DetailChapter = "&no=";
+    private static String ListTitleId = "/webtoon/list.nhn?titleId=";
+    private static String ListPage = "&page=";
 
-    private String directory = "/Users/joao/Documents/Webtoons/";
+    private static String directory = "/Users/joao/Documents/Webtoons/";
 
-    private Integer timeout = 5 * 1000; // value in milis
+    private static Integer timeout = 5 * 1000; // value in milis
 
-    public String getComicNaver() {
+    public static String getComicNaver() {
         return ComicNaver;
     }
 
@@ -31,23 +31,19 @@ public class Constantes {
         return ListTitleId;
     }
 
-    public String getDirectory() {
+    public static String getDirectory() {
         return directory;
     }
 
-    public Integer getTimeOut() {
+    public static Integer getTimeOut() {
         return timeout;
     }
 
-    public void setTimeOut(Integer timeOut) {
-        this.timeout = timeout;
-    }
-
-    public String getLinkUrl(Integer titleId, Integer chapter){
+    public static String getLinkUrl(Integer titleId, Integer chapter){
         return ComicNaver + DetailTitleId + titleId + DetailChapter + chapter;
     }
 
-    public String getLinksFromPage(Integer titleId, Integer page){
+    public static String getLinksFromPage(Integer titleId, Integer page){
         return ComicNaver + ListTitleId + titleId + ListPage + page;
     }
 }
