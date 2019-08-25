@@ -7,22 +7,16 @@ package com.joao.imagefromurl;
 
 import Util.Titles;
 
-import java.util.logging.Logger;
-
 /**
  *
  * @author joao
  */
-public class WebtoonOrigin {
-
-    private static Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    private static String urlBase = "https://comic.naver.com";
-    private static String folder = "general";
+public class WebtoonMain {
 
     public static void main(String[] args) {
         ComicNaver cn = new ComicNaver();
 
-        cn.all(Titles.마왕이_되는_중2야,1,5);
+        cn.all(Titles.신의_언어,24,25);
 
         /*
         cn.downloadChapter("205화_검열 7", "/webtoon/detail.nhn?titleId=648419&no=209&weekday=mon", Titles.뷰티풀_군바리);
