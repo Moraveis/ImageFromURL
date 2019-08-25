@@ -1,6 +1,5 @@
 package com.joao.imagefromurl;
 
-import Models.Webtoons;
 import Util.Constantes;
 import Util.Titles;
 import org.jsoup.Connection;
@@ -9,7 +8,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
@@ -19,12 +22,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ComicNaver implements Webtoons {
+public class ComicNaver {
 
     private static Logger logger = Logger.getLogger(ComicNaver.class.getName());
-//    private Constantes constantes = new Constantes();
 
-    @Override
     public void all(Titles t, Integer startPage, Integer endPage) {
         HashMap<String, String> map = new LinkedHashMap<>();
 
@@ -49,7 +50,7 @@ public class ComicNaver implements Webtoons {
                     logger.log(Level.INFO, "{\"title\": \"{"+t.getName()+"}\", \"link\": \"{"+link+"}\"}");
                 }
 
-                Thread.sleep(Constantes.getTimeOut());
+                Thread.sleep(Constantes.TIMEOUT);
             }
 
             if (map.size() > 0) {
@@ -63,17 +64,16 @@ public class ComicNaver implements Webtoons {
         }
     }
 
-    @Override
+    // TODO: implement
     public void byChapter() {
 
     }
 
-    @Override
     public void downloadChapter(String name, String link, Titles title) {
         Document doc = null;
         Connection con = null;
 
-        link = Constantes.getComicNaver() + link;
+        link = Constantes.COMIC_NAVER + link;
 
         try {
             con = Jsoup.connect(link);
@@ -111,7 +111,7 @@ public class ComicNaver implements Webtoons {
                 in.close();
                 byte[] response = out.toByteArray();
 
-                String folder = Constantes.getDirectory() + title.getFolder() + "/";
+                String folder = Constantes.DIRECTORY + title.getFolder() + "/";
 
                 folder = folder + name + "/";
                 File chapterFolder = new File(folder);
@@ -124,7 +124,7 @@ public class ComicNaver implements Webtoons {
                             System.out.println("DIR created");
                         }
                     } catch (SecurityException se) {
-                        folder = Constantes.getDirectory() + title.getFolder() + "/";
+                        folder = Constantes.DIRECTORY + title.getFolder() + "/";
                         logger.log(Level.SEVERE, se.getMessage());
                     }
                 }
@@ -140,14 +140,13 @@ public class ComicNaver implements Webtoons {
             }
 
             try {
-                Thread.sleep(Constantes.getTimeOut());
+                Thread.sleep(Constantes.TIMEOUT);
             } catch (Exception e) {
                 logger.log(Level.SEVERE, e.getMessage());
             }
         });
     }
 
-    @Override
     public boolean isDownloaded(String search) {
         return false;
     }
